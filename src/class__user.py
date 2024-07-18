@@ -1,15 +1,14 @@
 import json
 import os.path
 
-from src.Class__API import Hh
-from src.Class__vacancy import Vacancies
+from src.class__api import Hh
+from src.class__vacancy import Vacancies
 
 
 class User:
     def __init__(self, name):
         self.name = name
         self.vacancies_list = []
-        self.path = os.path.abspath("data/vacancies_sort.json")
 
     @staticmethod
     def get_vacancies(keyword):
