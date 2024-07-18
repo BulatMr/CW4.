@@ -36,7 +36,8 @@ class FileJSON(File):
     Класс для работы с JSON файлами.
     """
     def __init__(self):
-        self.path = os.path.abspath("data/vacancies.json")
+        self._name = 'vacancies.json'
+        self.path = os.path.abspath(f"data/{self._name}")
 
     def file_open(self):
         with open(self.path, "r", encoding='utf-8') as file:
